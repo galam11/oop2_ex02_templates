@@ -44,3 +44,18 @@ bool Date::operator!=(const Date& other) const
     return !(*this == other);
 }
 
+int Date::getYear() const
+{
+    return m_year;
+}
+
+int Date::getMonth() const
+{
+    return m_month;
+}
+
+int Date::getDay() const
+{
+    return m_day;
+}
+

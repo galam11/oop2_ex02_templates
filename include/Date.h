@@ -13,6 +13,11 @@ public:
     bool operator>(const Date&) const;
     bool operator==(const Date&) const;
     bool operator!=(const Date&) const;
+
+    int getYear() const;
+    int getMonth() const;
+    int getDay() const;
+
 private:
     int m_year;
     int m_month;
