@@ -1,0 +1,15 @@
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/oop2_ex02.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/Zip.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/ZipBackup.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/package.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/package_source.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/include/CMakeFiles/package.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/include/CMakeFiles/package_source.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/include/CMakeFiles/edit_cache.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/include/CMakeFiles/rebuild_cache.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/src/CMakeFiles/package.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/src/CMakeFiles/package_source.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/Users/galamar/Desktop/opp_ex02/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
