@@ -21,8 +21,9 @@ public:
 
 private:
     std::vector<BaseField*> m_fields;
-
     std::vector<FormValidator*> m_validators;
+
+    bool m_validFields = false;
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);

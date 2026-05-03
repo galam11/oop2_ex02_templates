@@ -5,6 +5,7 @@
 
 #include "Validator.h"
 #include "BaseField.h"
+#include "macros.h"
 
 template<class T>
 class Field : public BaseField
@@ -45,20 +46,20 @@ void Field<T>::addValidator(Validator<T>* validator)
 template<class T>
 void Field<T>::fill()
 {
-    std::cout << getMessage();
+    std::cout << getMessage() << " >> ";
     std::cin >> m_field;
 }
 
 template<class T>
 void Field<T>::printField(std::ostream &os) const
 {
-    os << "-------------------------------------------------------------------------\n";
+    os << LINE_SEPERATOR << '\n';
 
     os << getMessage() << " = " << m_field << '\n';
     if (!isValid())
         os << getErrMessage() << '\n';
 
-    os << "-------------------------------------------------------------------------";
+    os << LINE_SEPERATOR;
 }
 
 template<class T>

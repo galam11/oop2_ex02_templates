@@ -16,4 +16,11 @@ private:
     Field<int>* m_kids;
     Field<int>* m_pairRooms;
     Field<int>* m_familyRooms;
+
+    bool m_negCountRoomsErr = false;
+    bool m_totalPeopleKidsAdultsErr = false;
+    bool m_totalPeopleTotalRoomsErr = false;
+    bool m_roomsToTotalPeopleErr = false;
+
+    std::string buildErrMessage() const override;
 };

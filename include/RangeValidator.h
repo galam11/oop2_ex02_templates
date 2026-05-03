@@ -23,7 +23,7 @@ RangeValidator<T>::RangeValidator(const T &min, const T &max, const std::string&
 template<class T>
 bool RangeValidator<T>::validate(const T &value)
 {
-    return value > m_min && value < m_max;
+    return value >= m_min && value <= m_max;
 }
 
 template<class T>

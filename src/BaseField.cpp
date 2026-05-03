@@ -42,4 +42,19 @@ const std::string & BaseField::getErrMessage() const
 std::ostream& operator<<(std::ostream& os, const BaseField* field)
 {
     field->printField(os);
+    return os;
+}
+
+void BaseField::fillIfNeeded()
+{
+    if (!m_valid || m_empty)
+    {
+        m_empty = false;
+        fill();
+    }
+}
+
+void BaseField::clear()
+{
+    m_empty = true;
 }

@@ -22,6 +22,7 @@ set(OLD_GLOB
   "VacationTypes.h"
   "Validator.h"
   "ValuesToNames.h"
+  "macros.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -36,6 +37,7 @@ set(OLD_GLOB
   "Date.cpp"
   "Field.cpp"
   "Form.cpp"
+  "FormValidator.cpp"
   "HostingTypes.cpp"
   "IdValidator.cpp"
   "MailValidator.cpp"

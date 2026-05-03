@@ -3,7 +3,7 @@
 bool MailValidator::validate(const std::string &value)
 {
     size_t atIndex = value.find('@');
-    size_t dotIndex = value.find('.');
+    size_t dotIndex = value.rfind('.');
 
     if (atIndex == std::string::npos || dotIndex == std::string::npos || atIndex > dotIndex)
         return false;
