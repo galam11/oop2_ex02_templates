@@ -17,7 +17,7 @@ public:
     void fillForm() const;
     bool validateForm();
 
-    void printForm();
+    void printForm(std::ostream& os) const;
 
 private:
     std::vector<BaseField*> m_fields;

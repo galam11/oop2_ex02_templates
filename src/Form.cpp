@@ -16,14 +16,15 @@ void Form::addValidator(FormValidator* validator)
 void Form::fillForm() const
 {
     for (auto field : m_fields)
-        field->fill();
+        if (!field->isValid())
+            field->fill();
 }
 
 bool Form::validateForm()
 {
     bool valid = true;
     for (auto field : m_fields)
-        if (!field->isValid())
+        if (!field->checkValidation())
             valid = false;
 
     if (!valid)
@@ -36,10 +37,17 @@ bool Form::validateForm()
     return valid;
 }
 
-void Form::printForm()
+void Form::printForm(std::ostream& os) const
 {
+    if (m_fields.empty()) return;
+
+    os << m_fields[0];
+    for (int i = 0; i < m_fields.size(); i++)
+        os << '\n' << m_fields[i];
 }
 
-std::ostream& operator<<(std::ostream& os, const Form& form) {
+std::ostream& operator<<(std::ostream& os, const Form& form)
+{
+    form.printForm(os);
     return os;
 }

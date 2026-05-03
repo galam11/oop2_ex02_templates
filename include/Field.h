@@ -16,11 +16,11 @@ public:
 
     void addValidator(Validator<T>* validator);
     void fill() override;
-
+    void printField(std::ostream &os) const override;
 private:
     T m_field;
 	std::vector<Validator<T>*> m_validators;
-    bool validate() const override;
+    bool validate() override;
 };
 
 
@@ -50,10 +50,30 @@ void Field<T>::fill()
 }
 
 template<class T>
-bool Field<T>::validate() const
+void Field<T>::printField(std::ostream &os) const
 {
+    os << "-------------------------------------------------------------------------\n";
+
+    os << getMessage() << " = " << m_field << '\n';
+    if (!isValid())
+        os << getErrMessage() << '\n';
+
+    os << "-------------------------------------------------------------------------";
+}
+
+template<class T>
+bool Field<T>::validate()
+{
+    clearErrMessage();
+    bool valid = true;
+
     for (auto validator : m_validators)
         if (!validator->validate(m_field))
-            return false;
-    return true;
+        {
+            appandErrMessage(validator->getErrMessage());
+            valid = false;
+        }
+
+    return valid;
 }
+
