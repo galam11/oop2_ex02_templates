@@ -23,3 +23,8 @@ bool IdValidator::validate(const uint32_t &value)
 
     return (sum % 10 == 0);
 }
+
+std::string IdValidator::getErrMessage()
+{
+    return "Error: Invalid ID, ID must be 8 or 9 digits and contain the correct control digit.";
+}

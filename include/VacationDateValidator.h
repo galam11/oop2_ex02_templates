@@ -9,6 +9,8 @@ public:
     VacationDateValidator(const Date& date);
     bool validate(const Date& value) override;
 
+    std::string getErrMessage() override;
+
 private:
     Date m_currentDate;
 };

@@ -7,6 +7,7 @@ class MailValidator : public Validator<std::string>
 public:
     bool validate(const std::string& value) override;
 
+    std::string getErrMessage() override;
 private:
     bool validate_name(const std::string& name);
     bool validate_top_level_domain(const std::string& domain);

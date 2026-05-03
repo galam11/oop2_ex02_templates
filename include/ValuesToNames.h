@@ -12,6 +12,9 @@ public:
     void setValue(int value);
 
     std::string valuesAndNames();
+
+
+
 private:
     int m_value = 0;
 };
@@ -66,4 +69,32 @@ std::ostream& operator<<(std::ostream& os, const ValuesToNames<T>& vtn)
     return os;
 }
 
+template <typename T>
+bool operator==(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return a.getValue() == b.getValue();
+}
 
+template <typename T>
+bool operator!=(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return !(a == b);
+}
+
+template <typename T>
+bool operator<(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return a.getValue() < b.getValue();
+}
+
+template <typename T>
+bool operator>(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return b < a;
+}
+
+template <typename T>
+bool operator<=(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return !(a > b);
+}
+
+template <typename T>
+bool operator>=(const ValuesToNames<T>& a, const ValuesToNames<T>& b) {
+    return !(a < b);
+}

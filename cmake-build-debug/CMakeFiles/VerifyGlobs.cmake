@@ -5,10 +5,12 @@ cmake_policy(SET CMP0009 NEW)
 # MY_HEADER_FILES at include/CMakeLists.txt:2 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/galamar/Desktop/opp_ex02/include" "/Users/galamar/Desktop/opp_ex02/include/*.h")
 set(OLD_GLOB
+  "BaseField.h"
   "CapacityValidator.h"
   "Date.h"
   "Field.h"
   "Form.h"
+  "FormValidator.h"
   "HostingTypes.h"
   "IdValidator.h"
   "MailValidator.h"
@@ -29,6 +31,7 @@ endif()
 # MY_SOURCE_FILES at src/CMakeLists.txt:1 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/galamar/Desktop/opp_ex02/src" "/Users/galamar/Desktop/opp_ex02/src/*.cpp")
 set(OLD_GLOB
+  "BaseField.cpp"
   "CapacityValidator.cpp"
   "Date.cpp"
   "Field.cpp"

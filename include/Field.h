@@ -1,30 +1,39 @@
 #pragma once
-#include <string>
+
 #include <vector>
 #include <iostream>
 
 #include "Validator.h"
+#include "BaseField.h"
 
 template<class T>
-class Field
+class Field : public BaseField
 {
 public:
     Field(const std::string& messg);
 
+    const T& getValue() const;
+
     void addValidator(Validator<T>* validator);
-    void fill();
-    bool isValid();
+    void fill() override;
+
 private:
     T m_field;
-    std::string m_message;
 	std::vector<Validator<T>*> m_validators;
+    bool validate() const override;
 };
 
 
 template<class T>
 Field<T>::Field(const std::string& messg)
-    : m_message(messg)
+    : BaseField(messg)
 {
+}
+
+template<class T>
+const T& Field<T>::getValue() const
+{
+    return m_field;
 }
 
 template<class T>
@@ -36,12 +45,12 @@ void Field<T>::addValidator(Validator<T>* validator)
 template<class T>
 void Field<T>::fill()
 {
-    std::cout << m_message;
+    std::cout << getMessage();
     std::cin >> m_field;
 }
 
 template<class T>
-bool Field<T>::isValid()
+bool Field<T>::validate() const
 {
     for (auto validator : m_validators)
         if (!validator->validate(m_field))

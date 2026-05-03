@@ -10,16 +10,25 @@ public:
 
     bool validate() override;
 private:
-    A* m_a;
-    B* m_b;
+    A* m_vacationField;
+    B* m_hostingField;
 };
 
 template<class A, class B>
 VacationToHostingValidator<A, B>::VacationToHostingValidator(A*a, B *b)
-    : m_a(a), m_b(b) { }
+    : m_vacationField(a), m_hostingField(b) { }
 
 template<class A, class B>
 bool VacationToHostingValidator<A, B>::validate()
 {
-    return false;
+    int vacationVal = m_vacationField->getValue().getValue();
+    int hostingVal = m_hostingField->getValue().getValue();
+
+    if (vacationVal == 1 && hostingVal == 1)
+        return false;
+
+    if (vacationVal == 2 && hostingVal == 3)
+        return false;
+
+    return true;
 }

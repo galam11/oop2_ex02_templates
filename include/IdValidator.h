@@ -6,4 +6,5 @@ class IdValidator : public Validator<uint32_t>
 {
 public:
     bool validate(const uint32_t& value) override;
+    std::string getErrMessage() override;
 };

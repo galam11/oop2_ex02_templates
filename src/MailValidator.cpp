@@ -15,6 +15,11 @@ bool MailValidator::validate(const std::string &value)
     return validate_name(userName) && validate_name(domainName) && validate_top_level_domain(topLevelDomainName);
 }
 
+std::string MailValidator::getErrMessage()
+{
+    return "\tError: Invalid mail format, format must be \'user_name@domain_name.top-level-domain\'.";
+}
+
 bool MailValidator::validate_name(const std::string &name)
 {
     if (name.empty()) return false;

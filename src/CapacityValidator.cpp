@@ -7,5 +7,18 @@ CapacityValidator::CapacityValidator(Field<int>* totalPeople, Field<int>* adults
 
 bool CapacityValidator::validate()
 {
-    return false;
+
+    if (m_pairRooms->getValue() <= 0 && m_familyRooms->getValue() <= 0)
+        return false;
+
+    if (m_totalPeople->getValue() != m_kids->getValue() + m_adults->getValue())
+        return false;
+
+    if (m_totalPeople->getValue() > m_pairRooms->getValue() * 2 + m_familyRooms->getValue() * 5)
+        return false;
+
+    if (m_totalPeople->getValue() < m_pairRooms->getValue() + m_familyRooms->getValue())
+        return false;
+
+    return true;
 }

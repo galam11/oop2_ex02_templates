@@ -11,3 +11,8 @@ bool NameValidator::validate(const std::string &value)
 
     return true;
 }
+
+std::string NameValidator::getErrMessage()
+{
+    return "\tError: Name must be at length >= 3 and must not contain numbers.";
+}
