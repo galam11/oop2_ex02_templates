@@ -1,6 +1,5 @@
 #include "NameValidator.h"
-
-#include <iostream>
+#include "macros.h"
 
 bool NameValidator::validate(const std::string &value)
 {
@@ -19,5 +18,5 @@ bool NameValidator::validate(const std::string &value)
 
 std::string NameValidator::getErrMessage()
 {
-    return "\tError: Name must be at length >= 3 and must not contain numbers.";
+    return NAME_ERR_MSG;
 }

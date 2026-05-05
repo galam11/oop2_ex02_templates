@@ -29,12 +29,12 @@ void BaseField::appandErrMessage(std::string err)
     m_errMessage += err;
 }
 
-const std::string & BaseField::getMessage() const
+const std::string& BaseField::getMessage() const
 {
     return m_message;
 }
 
-const std::string & BaseField::getErrMessage() const
+const std::string& BaseField::getErrMessage() const
 {
     return m_errMessage;
 }

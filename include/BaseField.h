@@ -19,7 +19,7 @@ private:
     std::string m_errMessage;
 
     bool m_valid = false;
-    bool m_empty = false;
+    bool m_empty = true;
 
 protected:
     const std::string& getMessage() const;

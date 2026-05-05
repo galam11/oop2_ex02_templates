@@ -1,4 +1,5 @@
 #include "MailValidator.h"
+#include "macros.h"
 
 bool MailValidator::validate(const std::string &value)
 {
@@ -17,7 +18,7 @@ bool MailValidator::validate(const std::string &value)
 
 std::string MailValidator::getErrMessage()
 {
-    return "\tError: Invalid mail format, format must be \'user_name@domain_name.top-level-domain\'.";
+    return MAIL_ERR_MSG;
 }
 
 bool MailValidator::validate_name(const std::string &name)

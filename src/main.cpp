@@ -173,18 +173,18 @@ int main()
 	// Creating the form and adding the fields to it
 	auto myForm = Form();
 	myForm.addField(nameField.get());
-	 myForm.addField(idField.get());
-	 myForm.addField(mailField.get());
-	 myForm.addField(dateOfBirthField.get());
-	 myForm.addField(vacationDateField.get());
-	 myForm.addField(vacationTypeField.get());
-	 myForm.addField(hostingTypeField.get());
-	 myForm.addField(nightsNumField.get());
-	 myForm.addField(pairRoomsField.get());
-	 myForm.addField(familyRoomsField.get());
-	 myForm.addField(totalPeopleField.get());
-	 myForm.addField(adultsField.get());
-	 myForm.addField(kidsField.get());
+	myForm.addField(idField.get());
+	myForm.addField(mailField.get());
+	myForm.addField(dateOfBirthField.get());
+	myForm.addField(vacationDateField.get());
+	myForm.addField(vacationTypeField.get());
+	myForm.addField(hostingTypeField.get());
+	myForm.addField(nightsNumField.get());
+	myForm.addField(pairRoomsField.get());
+	myForm.addField(familyRoomsField.get());
+	myForm.addField(totalPeopleField.get());
+	myForm.addField(adultsField.get());
+	myForm.addField(kidsField.get());
 
 	// Adding form validators
 	myForm.addValidator(vacationToHostingValidator.get());
@@ -244,8 +244,7 @@ std::string getGoodbyeMessage()
 
 void clearScreen()
 {
-	//system("cls");
-	std::cout << "\n\n" << std::endl;
+	system("cls");
 }
 
 Date currentDate()

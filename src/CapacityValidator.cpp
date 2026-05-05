@@ -50,8 +50,9 @@ bool CapacityValidator::validate()
 
 std::string CapacityValidator::buildErrMessage() const
 {
-    return (m_negCountRoomsErr ? NEG_COUNT_ROOMS_ERR_MSG : "") +
-        (m_totalPeopleKidsAdultsErr ? "\n" + TOTAL_PEOPLE_KIDS_ADULTS_ERR_MSG : "") +
-        (m_totalPeopleTotalRoomsErr ? "\n" + TOTAL_PEOPLE_TOTAL_ROOMS_ERR_MSG : "") +
-        (m_roomsToTotalPeopleErr ? "\n" + ROOMS_TO_TOTAL_PEOPLE_ERR_MSG : "");
+    return 
+        (m_negCountRoomsErr         ? NEG_COUNT_ROOMS_ERR_MSG                   : "") +
+        (m_totalPeopleKidsAdultsErr ? "\n" + TOTAL_PEOPLE_KIDS_ADULTS_ERR_MSG   : "") +
+        (m_totalPeopleTotalRoomsErr ? "\n" + TOTAL_PEOPLE_TOTAL_ROOMS_ERR_MSG   : "") +
+        (m_roomsToTotalPeopleErr    ? "\n" + ROOMS_TO_TOTAL_PEOPLE_ERR_MSG      : "");
 }

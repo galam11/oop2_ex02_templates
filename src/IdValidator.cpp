@@ -1,4 +1,6 @@
 #include "IdValidator.h"
+#include "macros.h"
+
 
 bool IdValidator::validate(const uint32_t &value)
 {
@@ -26,5 +28,5 @@ bool IdValidator::validate(const uint32_t &value)
 
 std::string IdValidator::getErrMessage()
 {
-    return "Error: Invalid ID, ID must be 8 or 9 digits and contain the correct control digit.";
+    return ID_ERR_MSG;
 }

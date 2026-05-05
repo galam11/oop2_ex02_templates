@@ -47,5 +47,5 @@ template<class A, class B>
 std::string VacationToHostingValidator<A, B>::buildErrMessage() const
 {
     return (m_weekendBreakFastErr ? WEEKEND_BREAK_FAST_ERR_MSG : "") +
-        (m_midWeekFullBoardErr ? "\n" + WEEKEND_BREAK_FAST_ERR_MSG : "");
+        (m_midWeekFullBoardErr ? "\n" + MID_WEEK_FULL_BOARD_ERR_MSG : "");
 }
